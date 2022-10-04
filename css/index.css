@@ -104,8 +104,7 @@
     inset-block-start: 0;
     inset-inline-start: 0;
     z-index: 1;
-    translate: 0 -2000px;
-    animation: fade-in-top-to-bottom 1300ms ease-out 200ms 1 forwards alternate;
+    animation: fade-in-top-to-bottom 1000ms ease-out 0s 1 forwards alternate;
   }
   .square__green {
     background: no-repeat center/cover url(../images/element-2.png);
@@ -114,8 +113,7 @@
     position: absolute;
     inset-block-end: -24px;
     inset-inline-end: -24px;
-    translate: 0 800px;
-    animation: fade-in-bottom-to-top 1300ms ease-out 400ms 1 forwards alternate;
+    animation: fade-in-bottom-to-top 1300ms ease-out 0s 1 forwards alternate;
   }
   .img__icon__yellow {
     background: no-repeat center/cover url(../images/element-1.png);
@@ -125,8 +123,7 @@
     position: absolute;
     inset-block-start: 49px;
     inset-inline-start: -47px;
-    translate: 0 -800px;
-    animation: fade-in-top-to-bottom 1300ms ease-out 400ms 1 forwards alternate;
+    animation: fade-in-top-to-bottom 1300ms ease-out 0s 1 forwards alternate;
   }
   .container__cards {
     position: absolute;
@@ -136,8 +133,7 @@
     max-block-size: 249px;
     block-size: 100%;
     max-inline-size: 520px;
-    translate: 2000px 0;
-    animation: fade-in-right-to-left 1300ms ease-out 400ms 1 forwards alternate;
+    animation: fade-in-right-to-left 1300ms ease-in-out 0s 1 forwards alternate;
   }
   .card__list {
     block-size: 100%;
@@ -235,7 +231,7 @@
 
 @keyframes fade-in-top-to-bottom {
   from {
-    translate: 0 -800px;
+    translate: 0 -500px;
     opacity: 0;
   }
   to {
@@ -246,7 +242,7 @@
 
 @keyframes fade-in-right-to-left {
   from {
-    translate: 2000px 0;
+    translate: 500px 0;
     opacity: 0;
   }
   to {
@@ -257,7 +253,7 @@
 
 @keyframes fade-in-bottom-to-top {
   from {
-    translate: 0 800px;
+    translate: 0 100px;
     opacity: 0;
   }
   to {
