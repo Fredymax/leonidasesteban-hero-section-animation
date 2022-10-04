@@ -64,16 +64,16 @@
                 <div class="card__header">
                   <div class="card__user">
                     <figure class="user__avatar">
-                      <img src="./images/Img-card-1.png" alt="User" />
+                      <img src="./images/Img-card-2.png" alt="User" />
                     </figure>
                     <div class="user__information">
-                      <h3 class="user__name">Floyd Miles</h3>
+                      <h3 class="user__name">Michael Major</h3>
                       <span class="user__position">Freelancer</span>
                     </div>
                   </div>
                   <div class="card__average">
                     <img class="card__start" src="./icons/star.svg" alt="Start" />
-                    <span class="card__valued">4.8</span>
+                    <span class="card__valued">7.9</span>
                   </div>
                 </div>
                 <div class="card__body">
@@ -89,16 +89,16 @@
                 <div class="card__header">
                   <div class="card__user">
                     <figure class="user__avatar">
-                      <img src="./images/Img-card-1.png" alt="User" />
+                      <img src="./images/Img-card-3.png" alt="User" />
                     </figure>
                     <div class="user__information">
-                      <h3 class="user__name">Floyd Miles</h3>
+                      <h3 class="user__name">Hugo Olivera</h3>
                       <span class="user__position">Freelancer</span>
                     </div>
                   </div>
                   <div class="card__average">
                     <img class="card__start" src="./icons/star.svg" alt="Start" />
-                    <span class="card__valued">4.8</span>
+                    <span class="card__valued">10.00</span>
                   </div>
                 </div>
                 <div class="card__body">
@@ -140,14 +140,12 @@
     <script>
       const $prev = document.querySelector("#btn-prev");
       const $next = document.querySelector("#btn-next");
-
       async function moveSlide() {
         const selector = await new Promise((resolve) => {
           setTimeout(() => {
             resolve(window.location.hash);
           }, 300);
         });
-        if (selector === "#") return;
         const currentSlide = document.querySelector(selector);
         const prevElement = currentSlide.previousElementSibling;
         const nextElement = currentSlide.nextElementSibling;
