@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Hero Section Animation</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="container__information">
+        <div class="information">
+          <h1 class="information__title">El sitio que desea, sin el tiempo de desarrollo</h1>
+          <p class="information__description">
+            Su sitio web debe ser un activo de marketing, no un <br />
+            desafio de ingeniería
+          </p>
+          <button class="information__button">Iniciar ahora <img src="./icons/arrow-button.svg" alt="Arrow Right" /></button>
+        </div>
+        <div class="sponsor">
+          <p class="sponsor__oficial">Patrocinador oficial</p>
+          <h2 class="sponsor__name">leonidasesteban.com</h2>
+        </div>
+      </div>
+      <div class="container__comments">
+        <div class="container__images">
+          <div class="img__programming"></div>
+          <div class="square__green"></div>
+          <div class="img__icon__yellow"></div>
+        </div>
+        <div class="container__cards">
+          <div class="card__list">
+            <div class="card" id="card-1" data-slide="1">
+              <div class="card__container">
+                <div class="card__header">
+                  <div class="card__user">
+                    <figure class="user__avatar">
+                      <img src="./images/Img-card-1.png" alt="User" />
+                    </figure>
+                    <div class="user__information">
+                      <h3 class="user__name">Floyd Miles</h3>
+                      <span class="user__position">Freelancer</span>
+                    </div>
+                  </div>
+                  <div class="card__average">
+                    <img class="card__start" src="./icons/star.svg" alt="Start" />
+                    <span class="card__valued">4.8</span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi expedita ipsa nesciunt et. Dicta, qui. Cum
+                    animi aspernatur ullam ad.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card-2" data-slide="2">
+              <div class="card__container">
+                <div class="card__header">
+                  <div class="card__user">
+                    <figure class="user__avatar">
+                      <img src="./images/Img-card-1.png" alt="User" />
+                    </figure>
+                    <div class="user__information">
+                      <h3 class="user__name">Floyd Miles</h3>
+                      <span class="user__position">Freelancer</span>
+                    </div>
+                  </div>
+                  <div class="card__average">
+                    <img class="card__start" src="./icons/star.svg" alt="Start" />
+                    <span class="card__valued">4.8</span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi expedita ipsa nesciunt et. Dicta, qui. Cum
+                    animi aspernatur ullam ad.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="card-3" data-slide="3">
+              <div class="card__container">
+                <div class="card__header">
+                  <div class="card__user">
+                    <figure class="user__avatar">
+                      <img src="./images/Img-card-1.png" alt="User" />
+                    </figure>
+                    <div class="user__information">
+                      <h3 class="user__name">Floyd Miles</h3>
+                      <span class="user__position">Freelancer</span>
+                    </div>
+                  </div>
+                  <div class="card__average">
+                    <img class="card__start" src="./icons/star.svg" alt="Start" />
+                    <span class="card__valued">4.8</span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi expedita ipsa nesciunt et. Dicta, qui. Cum
+                    animi aspernatur ullam ad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card__buttons">
+            <a class="button__arrows" id="btn-prev" onclick="moveSlide()" href="#card-1">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.8334 10H4.16675" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M10.0001 15.8333L4.16675 9.99996L10.0001 4.16663"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+            <a class="button__arrows" id="btn-next" onclick="moveSlide()" href="#card-2">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.16675 10H15.8334" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M10 4.16663L15.8333 9.99996L10 15.8333"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const $prev = document.querySelector("#btn-prev");
+      const $next = document.querySelector("#btn-next");
+
+      async function moveSlide() {
+        const selector = await new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(window.location.hash);
+          }, 300);
+        });
+        if (selector === "#") return;
+        const currentSlide = document.querySelector(selector);
+        const prevElement = currentSlide.previousElementSibling;
+        const nextElement = currentSlide.nextElementSibling;
+        $next.href = nextElement ? `#card-${nextElement.dataset.slide}` : `#card-${currentSlide.dataset.slide}`;
+        $prev.href = prevElement ? `#card-${prevElement.dataset.slide}` : `#card-${currentSlide.dataset.slide}`;
+      }
+    </script>
+  </body>
+</html>
